@@ -7,9 +7,10 @@ public class RotateAroundParent : MonoBehaviour
     public float radius = 2f; // Jarak dari objek parent
     public float rotationSpeed = 50f; // Kecepatan rotasi mengelilingi parent dalam derajat per detik
     public float selfRotationSpeed = 100f; // Kecepatan rotasi objek sendiri dalam derajat per detik
-
+    public GameObject objek;
     private float angle; // Sudut rotasi objek di sekitar parent
-
+    public string tagbub;
+    public string tagwea;
     void Start()
     {
         if (parentObject != null)
@@ -50,17 +51,34 @@ public class RotateAroundParent : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Jika tabrakan dengan objek bertag "bubble", maka bubble beserta child-nya dinonaktifkan
-        if (collision.gameObject.CompareTag("bubble"))
+        if (collision.gameObject.CompareTag(tagbub))
         {
-            Debug.Log("Tabrakan dengan bubble terdeteksi.");
-            collision.gameObject.SetActive(false); // Menonaktifkan bubble dan semua child-nya
+            if (objek = null)
+            {
+                return;
+            }
+            else
+            {
+                Debug.Log("Tabrakan dengan bubble terdeteksi.");
+                collision.gameObject.SetActive(false); // Menonaktifkan bubble dan semua child-nya
+            }
         }
         // Jika tabrakan dengan objek bertag "weapon", maka parent ini beserta child-nya dinonaktifkan
-        else if (collision.gameObject.CompareTag("weapon"))
+        else if (collision.gameObject.CompareTag(tagwea))
         {
-            Debug.Log("Tabrakan dengan weapon terdeteksi.");
+            
+            if (objek = null)
+            {
+                return;
+            }
+            else
+            {
+                Debug.Log("Tabrakan dengan weapon terdeteksi.");
             gameObject.SetActive(false); // Menonaktifkan parent ini
+            }
+
         }
+    
     }
 }
 
