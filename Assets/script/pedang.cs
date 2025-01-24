@@ -53,29 +53,21 @@ public class RotateAroundParent : MonoBehaviour
         // Jika tabrakan dengan objek bertag "bubble", maka bubble beserta child-nya dinonaktifkan
         if (collision.gameObject.CompareTag(tagbub))
         {
-            if (objek = null)
+            Debug.Log("Tabrakan dengan bubble terdeteksi.");
+            collision.gameObject.SetActive(false); //
+            GameObject[] objectsToDisable = GameObject.FindGameObjectsWithTag(tagwea);
+            foreach (GameObject obj in objectsToDisable)
             {
-                return;
-            }
-            else
-            {
-                Debug.Log("Tabrakan dengan bubble terdeteksi.");
-                collision.gameObject.SetActive(false); // Menonaktifkan bubble dan semua child-nya
+                obj.SetActive(false); // Nonaktifkan objek
             }
         }
         // Jika tabrakan dengan objek bertag "weapon", maka parent ini beserta child-nya dinonaktifkan
         else if (collision.gameObject.CompareTag(tagwea))
         {
-            
-            if (objek = null)
-            {
-                return;
-            }
-            else
-            {
-                Debug.Log("Tabrakan dengan weapon terdeteksi.");
+
+            Debug.Log("Tabrakan dengan weapon terdeteksi.");
             gameObject.SetActive(false); // Menonaktifkan parent ini
-            }
+            
 
         }
     
