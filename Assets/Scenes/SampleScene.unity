@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f7ce58952f7c04198957bca345dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpawn: 1
+  playerSpawn: 2
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100b960ab714c7c4980edbba33bd1997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampSpeed: 0.25
+  dampSpeed: 0.4
   player: {fileID: 0}
 --- !u!1 &1076505691
 GameObject:
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100b960ab714c7c4980edbba33bd1997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampSpeed: 0.25
+  dampSpeed: 0.4
   player: {fileID: 0}
 --- !u!1 &1243729368
 GameObject:

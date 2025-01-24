@@ -18,8 +18,18 @@ public class PlayerSpawn : MonoBehaviour
 
         for (int i = 0; i < numberOfPlayer; i++)
         {
+            int loop = i;
             var player = Instantiate(Player, Location.GetLocation().position, Quaternion.identity);
+            if (loop == 0)
+            {
+                player.GetComponent<Movement>().ChangeControl(global::player.one);
+            }
+            else
+            {
+                player.GetComponent<Movement>().ChangeControl(global::player.two);
+            }
             SplitMonitor.RegisterPlayer(player.transform);
+            loop++;
         }
 
         SplitMonitor.SetCamera();
