@@ -1,35 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateAroundParent : MonoBehaviour
-{
-    public Transform parentObject; // Objek parent yang akan dikelilingi
-    
-    public float radius = 2f; // Jarak dari objek parent
-    public float rotationSpeed = 50f; // Kecepatan rotasi mengelilingi parent dalam derajat per detik
-    public float selfRotationSpeed = 100f; // Kecepatan rotasi objek sendiri dalam derajat per detik
 
-    private float angle; // Sudut rotasi objek di sekitar parent
+public class RotateParentWithChild : MonoBehaviour
+{
+    public Transform childObject; // Objek child yang akan bergerak mengikuti parent
+    public float radius = 2f; // Jarak dari parent ke child
+    public float rotationSpeed = 50f; // Kecepatan rotasi parent dalam derajat per detik
+    public float selfRotationSpeed = 100f; // Kecepatan rotasi child sendiri dalam derajat per detik
+
+    private float angle; // Sudut rotasi child di sekitar parent
 
     void Start()
     {
-        if (parentObject != null)
+        if (childObject != null)
         {
             // Menentukan sudut awal secara acak
             angle = Random.Range(0f, 360f);
 
-            // Menghitung posisi awal berdasarkan sudut acak
+            // Menghitung posisi awal child berdasarkan sudut acak
             float radian = angle * Mathf.Deg2Rad;
             Vector3 offset = new Vector3(Mathf.Cos(radian), Mathf.Sin(radian), 0) * radius;
-            transform.position = parentObject.position + offset;
+            childObject.position = transform.position + offset;
 
-            // Menentukan rotasi awal objek secara acak
-            transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+            // Menentukan rotasi awal child secara acak
+            childObject.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
         }
     }
 
     void Update()
     {
-        if (parentObject != null)
+        if (childObject != null)
         {
             // Menghitung sudut rotasi berdasarkan kecepatan dan waktu
             angle += rotationSpeed * Time.deltaTime;
@@ -37,16 +39,15 @@ public class RotateAroundParent : MonoBehaviour
             // Mengkonversi sudut ke radian
             float radian = angle * Mathf.Deg2Rad;
 
-            // Menghitung posisi objek berdasarkan radius dan sudut
+            // Menghitung posisi child berdasarkan radius dan sudut
             Vector3 offset = new Vector3(Mathf.Cos(radian), Mathf.Sin(radian), 0) * radius;
-            transform.position = parentObject.position + offset;
+            childObject.position = transform.position + offset;
 
-            // Menambahkan rotasi lokal pada objek
-            transform.Rotate(Vector3.forward, selfRotationSpeed * Time.deltaTime);
+            // Menambahkan rotasi lokal pada child
+            childObject.Rotate(Vector3.forward, selfRotationSpeed * Time.deltaTime);
         }
     }
 
-    // Fungsi untuk menangani tabrakan
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Jika tabrakan dengan objek bertag "bubble", maka bubble beserta child-nya dinonaktifkan
@@ -63,7 +64,4 @@ public class RotateAroundParent : MonoBehaviour
         }
     }
 }
-
-
-
 

@@ -26,10 +26,6 @@ public class Player1 : MonoBehaviour
         // Menggerakkan karakter berdasarkan input
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        gameObject.SetActive(false);
-    }
+    
 }
 
