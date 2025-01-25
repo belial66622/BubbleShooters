@@ -14,16 +14,16 @@ public class CameraSplitMonitor : MonoBehaviour
 
     public void RegisterPlayer(Transform transform)
     {
+        var cam = _cameraList[cameraCount].GetComponent<CameraFollow>();
         if (isUsingTransform)
         {
             _cameraList[cameraCount].gameObject.transform.parent = transform;
-            _cameraList[cameraCount].gameObject.transform.localPosition = new Vector3(0, 0, -10f);
+            _cameraList[cameraCount].gameObject.transform.localPosition = cam.offset;
         }
 
         else
         {
-            _cameraList[cameraCount].gameObject.transform.position = transform.position + new Vector3 (0,0,-15f);
-            var cam =_cameraList[cameraCount].GetComponent<CameraFollow>();
+            _cameraList[cameraCount].gameObject.transform.position = transform.position + cam.offset;
             cam.SetFollowTarget(transform);
         }
         _cameraList[cameraCount].gameObject.SetActive(true);

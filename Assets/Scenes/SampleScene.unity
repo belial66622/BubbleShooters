@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f7ce58952f7c04198957bca345dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpawn: 2
+  playerSpawn: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1050479825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampSpeed: 0.4
-  player: {fileID: 0}
+  offset: {x: 0, y: 0, z: -25}
 --- !u!1 &1076505691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,7 +1104,7 @@ Transform:
   m_GameObject: {fileID: 1164006806}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampSpeed: 0.4
-  player: {fileID: 0}
+  offset: {x: 0, y: 0, z: -25}
 --- !u!1 &1243729368
 GameObject:
   m_ObjectHideFlags: 0
