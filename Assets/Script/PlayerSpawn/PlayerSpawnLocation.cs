@@ -6,6 +6,8 @@ public class PlayerSpawnLocation : MonoBehaviour
 
     private int spawnLocation = -1 ;
 
+    public int brbrl = 0;
+
     public Transform GetLocation()
     {
         if (spawnLocation < 0)

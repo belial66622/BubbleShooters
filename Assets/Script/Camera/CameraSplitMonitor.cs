@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game.CameraFollow;
 using UnityEngine;
 
 public class CameraSplitMonitor : MonoBehaviour

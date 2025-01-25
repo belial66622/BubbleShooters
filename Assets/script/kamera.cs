@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class kamera : MonoBehaviour
 {
     public Transform player; // Referensi ke transform pemain
     public Vector3 offset = new Vector3(0f, 0f, -10f); // Offset posisi kamera terhadap pemain

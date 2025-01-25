@@ -12,7 +12,7 @@ public class PlayerSpawn : MonoBehaviour
     CameraSplitMonitor SplitMonitor;
 
     int numberOfPlayer = 0;
-    private void Awake()
+    private void Start()
     {
         numberOfPlayer = GetComponent<PlayerNumber>().playerSpawn;
 
@@ -28,10 +28,10 @@ public class PlayerSpawn : MonoBehaviour
             {
                 player.GetComponent<Movement>().ChangeControl(global::player.two);
             }
+            EventsSystem.OnRegisterPlayer(player.transform);
             SplitMonitor.RegisterPlayer(player.transform);
             loop++;
         }
-
         SplitMonitor.SetCamera();
     }
 }
