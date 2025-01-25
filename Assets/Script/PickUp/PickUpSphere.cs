@@ -10,6 +10,9 @@ public class PickUpSphere : MonoBehaviour
     [SerializeField] 
     LayerMask layerMask;
 
+    [SerializeField]
+     bool IsShowGUI = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,10 @@ public class PickUpSphere : MonoBehaviour
         {
             foreach (RaycastHit2D hit in Hit)
             {
-                Debug.Log(hit.transform.gameObject.name);
+                if (hit.transform.gameObject.TryGetComponent<PickUp>(out PickUp pickUp))
+                {
+                    pickUp.Picked(transform);
+                }
             }
         }
     }
@@ -38,7 +44,9 @@ public class PickUpSphere : MonoBehaviour
 
     public void OnDrawGizmos()
     {
+        if (!IsShowGUI) return;
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, radius);
+        //Gizmos.DrawSphere(transform.position, radius);
     }
 }

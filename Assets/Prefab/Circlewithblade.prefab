@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -276,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -453,7 +451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -685,7 +682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -777,6 +773,7 @@ GameObject:
   - component: {fileID: 4309427903554316205}
   - component: {fileID: 4829016035307290754}
   - component: {fileID: 2584044301133080512}
+  - component: {fileID: 7993422133802428654}
   m_Layer: 6
   m_Name: Circlewithblade
   m_TagString: Untagged
@@ -939,6 +936,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7993422133802428654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684480052459633696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e330d2baff14fc84896ac8a2b1801b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &5708053231908612315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -1215,7 +1227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -1392,7 +1403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -1569,7 +1579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -1746,7 +1755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
@@ -1923,7 +1931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentdurability: 2
   durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
