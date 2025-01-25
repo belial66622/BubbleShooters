@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class BladeHealth : Health
 {
-    public int Durability = 2;
+    private int currentdurability = 0;
+    public int CurrentDurability => currentdurability;
 
+    [SerializeField]
+    private int durability;
+
+    [SerializeField]
     public GameObject Owner;
 
     Collider2D objColl;
@@ -14,6 +19,19 @@ public class BladeHealth : Health
     LayerMask layermask;
 
     RaycastHit2D[] hitsaved;
+
+    private void OnEnable()
+    {
+        currentdurability = durability;
+    }
+
+    public void DurabilityLevelUp()
+    {
+        durability++;
+        if (currentdurability == 0) return;
+        currentdurability++;
+    }
+
     private void Awake()
     {
         objColl = GetComponent<Collider2D>();
@@ -22,8 +40,8 @@ public class BladeHealth : Health
     public override void OnCollide(GameObject OtherGameObject)
     {
         Debug.Log("ada");
-        Durability--;
-        gameObject.SetActive(Durability > 0);
+        currentdurability--;
+        gameObject.SetActive(CurrentDurability > 0);
     }
 
     /* private void FixedUpdate()

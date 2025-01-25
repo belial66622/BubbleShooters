@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -275,7 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -451,7 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -682,7 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -1034,7 +1038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -1210,7 +1215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -1386,7 +1392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -1562,7 +1569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -1738,7 +1746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
@@ -1914,7 +1923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f1d554a486b54b9093d027081e664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 0
+  currentdurability: 2
+  durability: 2
   Owner: {fileID: 5684480052459633696}
   layermask:
     serializedVersion: 2
