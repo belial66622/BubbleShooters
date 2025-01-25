@@ -6,6 +6,8 @@ TagManager:
   tags:
   - bubble
   - weapon
+  - bubble2
+  - weapon2
   layers:
   - Default
   - TransparentFX
