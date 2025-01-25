@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class rotate : MonoBehaviour
@@ -8,9 +9,13 @@ public class rotate : MonoBehaviour
     [SerializeField]
     float speed = 10;
     // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        int random = Random.Range(0,2);
+        if (random == 0)
+        {
+            speed *= -1;
+        }
     }
 
     private void FixedUpdate()
