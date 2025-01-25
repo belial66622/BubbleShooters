@@ -12,7 +12,7 @@ public class PlayerSpawn : MonoBehaviour
     CameraSplitMonitor SplitMonitor;
 
     int numberOfPlayer = 0;
-    private void Start()
+    private void Awake()
     {
         numberOfPlayer = GetComponent<PlayerNumber>().playerSpawn;
 

@@ -20,6 +20,8 @@ public class BladeHealth : Health
 
     RaycastHit2D[] hitsaved;
 
+    [SerializeField]
+    private bool isbot;
     private void OnEnable()
     {
         currentdurability = durability;
@@ -76,6 +78,10 @@ public class BladeHealth : Health
     {
         if (other.gameObject.TryGetComponent<Health>(out Health health))
         {
+            if (other.gameObject.TryGetComponent<Bot>(out Bot bot))
+            {
+                return;
+            }
             if (health.GetType() == typeof(BladeHealth))
             {
                 if (Owner == ((BladeHealth)health).Owner)

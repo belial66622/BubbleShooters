@@ -20,15 +20,25 @@ public class FollowRandomTargetWithDynamicMovement : MonoBehaviour
     private bool isMovingBackward = false; // Whether the object is moving backward
     private Vector3 randomDirection;
 
+    [SerializeField]
+    GameManager gameManager;
 
     private void Player(Transform player)
     {
         targets.Add(player);
     }
+
+    public void SetGameManager(GameManager game)
+    {
+        gameManager = game;
+    }
     
     void Start()
     {
-        EventsSystem.OnRegisterPlayerEvent = Player;
+        foreach (var player in gameManager.playerList)
+        {
+            Player(player.transform);
+        }
         // Initialize the timer and pick the first target
         timer = followDuration + randomMoveDuration; // Start with random movement
         StartRandomMovement();
