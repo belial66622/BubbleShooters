@@ -9,6 +9,7 @@ public class PickUp : MonoBehaviour
     float TimeToPick = 1;
 
     Collider2D colliders;
+    public int XP=0;
 
     private void Awake()
     {
@@ -19,6 +20,10 @@ public class PickUp : MonoBehaviour
     {
         colliders.enabled = true;
     }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
 
     public void Picked(Transform player)
     {
@@ -28,6 +33,7 @@ public class PickUp : MonoBehaviour
 
     IEnumerator ItemPick(Transform player)
     {
+        var movement = player.gameObject.GetComponent<Movement>().playerControl;
         float time = 0;
         while (time < 1)
         {
@@ -35,6 +41,7 @@ public class PickUp : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, player.position, EaseInCirc(time));
             time += Time.deltaTime/ TimeToPick;
         }
+        EventsSystem.OnGetXp(XP, movement);
         yield return null;
         gameObject.SetActive(false);
     }

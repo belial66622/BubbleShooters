@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     GameManager gameManager;
 
+    [SerializeField]
     List<Camera> cameras = new();
 
     List<GameObject> Enemy = new();
@@ -26,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
     int maxenemy;
     void Start()
     {
+        cameras = new();
         foreach (var cam in gameManager.CameraList)
         {
             if (cam.gameObject.activeInHierarchy)
@@ -66,6 +68,7 @@ public class EnemySpawner : MonoBehaviour
                             {
                                 if (!temp.activeInHierarchy)
                                 {
+                                    temp.transform.position = GetPosition();
                                     temp.SetActive(true);
                                     can = true;
                                     break;
@@ -103,41 +106,45 @@ public class EnemySpawner : MonoBehaviour
         {
             if (flipflop)
             {
-                returnable = RandomV(cameras[0].rect.xMin, cameras[0].rect.xMax, cameras[0].rect.yMin, cameras[0].rect.yMax);
+                returnable = RandomV(cameras[0]);
             }
             else
             {
-                returnable = RandomV(cameras[1].rect.xMin, cameras[1].rect.xMax, cameras[1].rect.yMin, cameras[1].rect.yMax);
+                returnable = RandomV(cameras[1]);
             }
             flipflop = !flipflop;
         }
         else
         {
-            returnable = RandomV(cameras[0].rect.xMin, cameras[0].rect.xMax, cameras[0].rect.yMin, cameras[0].rect.yMax);
+            returnable = RandomV(cameras[0]);
         }
         return returnable;
     }
 
-    public Vector3 RandomV(float xMin, float xMax, float yMin, float yMax)
+    public Vector3 RandomV(Camera pos)
     {
         Vector3 returnable = Vector3.zero;
-        switch (Random.Range(0, 4))
-        {
-            case 0:
-                returnable = new Vector3(Random.Range(xMin, xMax), yMax);
-                break;
-            case 1:
-                returnable = new Vector3(Random.Range(xMin, xMax), yMin);
-                break;
-            case 2:
-                returnable = new Vector3(xMin, Random.Range(yMin, yMax));
-                break;
-            case 3:
-                returnable = new Vector3(xMax, Random.Range(yMin, yMax));
-                break;
-        }
 
+        returnable = new Vector3(pos.transform.position.x + Random.Range(-20, 20), pos.transform.position.x + Random.Range(-20, 20), 0);
+
+
+        /*        switch (Random.Range(0, 4))
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        returnable = pos.ViewportToWorldPoint(new Vector3(.5f, 1, 0));
+                        break;
+                    case 2:
+                        returnable = pos.ViewportToWorldPoint(new Vector3(0, .5f, 0));
+                        break;
+                    case 3:
+                        returnable = pos.ViewportToWorldPoint(new Vector3(1, .5f, 0));
+                        break;
+    }*/
         return returnable;
     }
 
+
 }
+

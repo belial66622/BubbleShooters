@@ -8,9 +8,9 @@ public class Movement : MonoBehaviour
     bool IsMovementEnable = true;
 
     [SerializeField]
-    float movementspeed = 1;
+    public float movementspeed = 1;
 
-    player playerControl;
+    public player playerControl;
     // Start is called before the first frame update
     void Start()
     {

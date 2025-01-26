@@ -41,7 +41,7 @@ public class BladeHealth : Health
 
     public override void OnCollide(GameObject OtherGameObject)
     {
-        Debug.Log("ada");
+        //Debug.Log("ada");
         currentdurability--;
         gameObject.SetActive(CurrentDurability > 0);
     }
@@ -78,7 +78,7 @@ public class BladeHealth : Health
     {
         if (other.gameObject.TryGetComponent<Health>(out Health health))
         {
-            if (other.gameObject.TryGetComponent<Bot>(out Bot bot))
+            if (other.gameObject.TryGetComponent<Bot>(out Bot bot) && isbot)
             {
                 return;
             }

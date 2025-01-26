@@ -4,7 +4,7 @@ public class rotate : MonoBehaviour
 {
     float x = 0;
     [SerializeField]
-    float speed = 10;
+   public float speed = 10;
     // Update is called once per frame
     private void Awake()
     {
