@@ -11,15 +11,23 @@ public class Movement : MonoBehaviour
     public float movementspeed = 1;
 
     public player playerControl;
+
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            EventsSystem.OnPaused();
+        }
         if (!IsMovementEnable) return;
         var move = Vector3.zero;
         if (playerControl == player.one)
@@ -60,6 +68,7 @@ public class Movement : MonoBehaviour
                 move += Vector3.down;
             }
         }
+
         transform.position += move * Time.deltaTime * movementspeed;
     }
 

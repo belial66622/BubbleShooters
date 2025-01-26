@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject pojo;
     public List<GameObject> playerList;
 
     [SerializeField]
@@ -16,14 +19,27 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     GameObject Gameover;
+
+    bool isPaused = false;
+
+
+
+    public void puase()
+    {
+        isPaused = !isPaused;
+        pojo.SetActive(true);
+        Time.timeScale = isPaused ? 0 : 1;
+    }
     private void Awake()
     {
         EventsSystem.OnRegisterPlayerEvent += AddPlayer;
+        EventsSystem.OnPausedEvent += puase;
     }
 
     private void OnDestroy()
     {
         EventsSystem.OnRegisterPlayerEvent -= AddPlayer;
+        EventsSystem.OnPausedEvent -= puase;
     }
     private void AddPlayer(Transform player)
     {

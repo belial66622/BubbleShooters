@@ -11,11 +11,15 @@ public static class EventsSystem
 
     public static Action<int> OnTimeCountEvent;
     
+    public static Action OnPausedEvent;
     public static void OnRegisterPlayer(Transform player)
     {
         OnRegisterPlayerEvent?.Invoke(player);
     }
-
+    public static void OnPaused()
+    { 
+        OnPausedEvent?.Invoke();
+    }
     public static void OnTimeCount(int bebek)
     { 
         OnTimeCountEvent?.Invoke(bebek);

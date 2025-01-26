@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets: []
-  speed: 3
+  speed: 5
   minDistance: 0
   backAndForthDuration: 2
   followDuration: 9
