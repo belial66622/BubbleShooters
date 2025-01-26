@@ -95,7 +95,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SWORD_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1769
+        width: 864
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ef232d08aa5544f95ab029572a2414
+      internalID: -382534861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORD_1
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 1790
+        width: 877
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d612c60d7710f344b9155b2c8411cda
+      internalID: -1842002768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORD_2
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1748
+        width: 668
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72acf959862b274584592faa402ff7b
+      internalID: -921550984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORD_3
+      rect:
+        serializedVersion: 2
+        x: 2615
+        y: 1740
+        width: 848
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03d23859b251844db985126dbaf87bc
+      internalID: -423769967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORD_4
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 942
+        width: 697
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd71a5930eb8bf4199e647052d1f7f2
+      internalID: 682070452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORD_5
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 933
+        width: 798
+        height: 815
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df174d32d24ed71448d2e981d9676fc4
+      internalID: 2122976125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORD_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1013
+        width: 809
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77516dce0cc645247aedcf618f5e7256
+      internalID: 1957794608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +253,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SWORD_0: -382534861
+      SWORD_1: -1842002768
+      SWORD_2: -921550984
+      SWORD_3: -423769967
+      SWORD_4: 682070452
+      SWORD_5: 2122976125
+      SWORD_6: 1957794608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

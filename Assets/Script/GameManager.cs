@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI textMeshProUGUI;
     int b;
 
+    [SerializeField]
+    GameObject Gameover;
     private void Awake()
     {
         EventsSystem.OnRegisterPlayerEvent += AddPlayer;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void gameover()
     {
         StopAllCoroutines();
+        Gameover.SetActive(true);
     }
 
     private void Start()

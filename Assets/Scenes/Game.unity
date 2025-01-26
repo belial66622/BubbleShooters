@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 37633167}
   - component: {fileID: 37633166}
   - component: {fileID: 37633165}
+  - component: {fileID: 37633168}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -204,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 37633166}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37633168}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &37633166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +234,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -243,6 +256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37633163}
   m_CullTransparentMesh: 1
+--- !u!114 &37633168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37633163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfa7e9d35aa96c40bf4064e41c3db3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &58694505
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +416,7 @@ MonoBehaviour:
   - {fileID: 1050479828}
   - {fileID: 1164006809}
   time: 1
-  maxenemy: 20
+  maxenemy: 40
 --- !u!1 &430007402
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f7ce58952f7c04198957bca345dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpawn: 2
+  playerSpawn: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Back To Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -921,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampSpeed: 0.4
-  offset: {x: 0, y: 0, z: -25}
+  offset: {x: 0, y: 0, z: -15}
 --- !u!1 &1076505691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampSpeed: 0.4
-  offset: {x: 0, y: 0, z: -25}
+  offset: {x: 0, y: 0, z: -15}
 --- !u!1 &1243729368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1415,7 @@ MonoBehaviour:
   - {fileID: 1050479828}
   - {fileID: 1164006809}
   textMeshProUGUI: {fileID: 1780000696}
+  Gameover: {fileID: 1470617630}
 --- !u!1 &1627082433
 GameObject:
   m_ObjectHideFlags: 0

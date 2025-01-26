@@ -14,7 +14,7 @@ public class PlayerSpawn : MonoBehaviour
     int numberOfPlayer = 0;
     private void Awake()
     {
-        numberOfPlayer = GetComponent<PlayerNumber>().playerSpawn;
+        numberOfPlayer = DataBeforeScene.PlayerPlay;
 
         for (int i = 0; i < numberOfPlayer; i++)
         {

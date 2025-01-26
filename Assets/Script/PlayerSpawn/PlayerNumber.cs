@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayerNumber : MonoBehaviour
 {
-    public int playerSpawn;
+    public int playerSpawn = 0;
 
-/*    private void Awake()
+    private void Awake()
     {
         playerSpawn = DataBeforeScene.PlayerPlay;
-    }*/
+    }
+    /*    private void Awake()
+        {
+            playerSpawn = DataBeforeScene.PlayerPlay;
+        }*/
 }
