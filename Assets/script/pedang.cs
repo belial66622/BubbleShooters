@@ -9,7 +9,7 @@ public class RotateAroundParent : MonoBehaviour
     public float selfRotationSpeed = 100f; // Kecepatan rotasi objek sendiri dalam derajat per detik
     public string tagbub; // Tag objek bubble
     public string tagwea; // Tag objek weapon
-
+    
     private float angle; // Sudut rotasi objek di sekitar parent
 
     void Start()
