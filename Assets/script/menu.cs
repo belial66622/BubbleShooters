@@ -41,4 +41,20 @@ public class MainMenuCameraController : MonoBehaviour
     {
         targetPosition = creditsPosition;
     }
+
+    public void quit()
+    {
+        Debug.Log("Keluar dari game...");
+        Application.Quit();
+    }
+
+    public void single()
+    {
+        
+    }
+
+    public void multi()
+    {
+        
+    }
 }
